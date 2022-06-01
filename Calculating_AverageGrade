@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class NotOrt {
+    public static void main(String[] args) {
+    int math, pyhsics, chemistry, literature, history, music;
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Your math grade?: ");
+    math = input.nextInt();
+
+    System.out.print("Your pyhsics grade?: ");
+    pyhsics = input.nextInt();
+
+    System.out.print("Your chemistry grade?: ");
+    chemistry = input.nextInt();
+
+    System.out.print("Your literature grade?: ");
+    literature = input.nextInt();
+
+    System.out.print("Your history grade?: ");
+    history = input.nextInt();
+
+    System.out.print("Your music grade?: ");
+    music = input.nextInt();
+
+    float averageGrade = (math+pyhsics+chemistry+literature+history+music)/6;
+
+
+    System.out.println("Your average grade is: " + averageGrade);
+    boolean result = averageGrade>50;
+    String str = result? "Passed":"Fail";
+    System.out.print("Your status is: " + str);
+
+    }
+
+}
