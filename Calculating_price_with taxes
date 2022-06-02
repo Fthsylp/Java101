@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class kdvProgram {
+    public static void main(String[] args) {
+
+
+        int price;
+        double taxes, priceincludedtaxes;
+        boolean taxStatus;
+        Scanner input = new Scanner(System.in);
+
+
+
+        System.out.print("What is the price without taxes: ");
+        price = input.nextInt();
+
+        taxStatus = price>0 && price<1000;
+        taxes = taxStatus? price*0.18 : price*0.08;
+
+        priceincludedtaxes = price+ taxes;
+
+        System.out.println("The tax rate is: "+ taxes/price);
+        System.out.println("The tax you paid is: " + taxes);
+        System.out.print("Total: " + priceincludedtaxes);
+
+
+
+
+    }
+}
