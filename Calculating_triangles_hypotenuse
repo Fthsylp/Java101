@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class pisagor {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int a, b, c ;
+        double area;
+
+        System.out.print("Enter your line sizes: ");
+        a = input.nextInt();
+        b = input.nextInt();
+
+        c = (a*a + b*b);
+        area = a*b/2;
+
+        System.out.println("The value of hypotenuse is: " + Math.sqrt(c));
+        System.out.print("The are of triangle is: " + area);
+
+    }
+}
