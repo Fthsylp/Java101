@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class calculatingGrade {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int maths, physics, literature, chemistry, music;
+        double average;
+
+        System.out.print("What is your maths grade: ");
+        maths = input.nextInt();
+
+        System.out.print("What is your physics grade: ");
+        physics = input.nextInt();
+
+        System.out.print("What is your literature grade: ");
+        literature = input.nextInt();
+
+        System.out.print("What is your chemistry grade: ");
+        chemistry = input.nextInt();
+
+        System.out.print("What is your music grade: ");
+        music = input.nextInt();
+
+        if  (maths<0 || maths>100){
+            maths=0;
+        }
+        else if (physics<0 || physics>100) {
+            physics = 0;
+        }
+        else if (literature<0 || literature>100) {
+            literature = 0;
+        }
+        else if (chemistry<0 || chemistry>100) {
+            chemistry = 0;
+        }
+        else if (music<0 || music>100) {
+            music = 0;
+        }
+
+
+        average = (maths+physics+literature+chemistry+music)/5;
+        System.out.println("Your average grade is: " + average);
+
+        if (average >55){
+            System.out.println("Congratulations! You have passed the class.");
+
+        }
+        else if (average<55){
+            System.out.println("You should work harder for your next semester.");
+        }
+
+
+
+    }
+}
